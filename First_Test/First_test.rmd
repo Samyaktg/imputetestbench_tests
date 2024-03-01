@@ -4,24 +4,44 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+a time series analysis of the oil data
+
+```{r}
 # Load required libraries
 library(readxl)
 library(imputeTestbench)
 library(tidyverse)
+```
 
-# Load the data from the Excel file.
-oil <- read.csv("oil.csv")
+
+Read in the dataset and take a look at the first few rows
+```{r}
+oil <- read.csv("First_Test/oil.csv")
 View(oil)
 glimpse(oil)
+```
 
-# Convert 'date' to Date class
+Convert 'date' to Date class
+```{r}
 oil$date <- as.Date(oil$date)
+```
 
-
-# Use imputeTestbench to impute missing values
+Create a time series object
+```{r}
+time_series_df <- ts(oil$dcoilwtico, start = c(2013, 1), frequency = 365)
+print(time_series_df)
+```
+Use imputeTestbench to impute missing values
+```{r}
 imputation_results <- impute_errors(data = time_series_df)
 imputation_results
+```
 
-
-# Plot imputed values
+Plot imputed values
+```{r}
 plot_errors(imputation_results, plotType = 'line')
+```

@@ -1,0 +1,11 @@
+---
+title: "Vignette"
+output: rmarkdown::html_vignette
+---
+
+# Introduction
+
+This vignette provides an overview of the functions in the `Samyak_Package` package.
+
+```{r setup, include=FALSE}
+library(samyak_package)

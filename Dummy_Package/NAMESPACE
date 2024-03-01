@@ -1,0 +1,5 @@
+export(anova_plot)
+export(best_comb)
+export(multicomp)
+export(ttest_ind)
+export(tukeyhsd)
