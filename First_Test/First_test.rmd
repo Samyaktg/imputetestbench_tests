@@ -1,0 +1,27 @@
+---
+title: "Oil Data Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load required libraries
+library(readxl)
+library(imputeTestbench)
+library(tidyverse)
+
+# Load the data from the Excel file.
+oil <- read.csv("oil.csv")
+View(oil)
+glimpse(oil)
+
+# Convert 'date' to Date class
+oil$date <- as.Date(oil$date)
+
+
+# Use imputeTestbench to impute missing values
+imputation_results <- impute_errors(data = time_series_df)
+imputation_results
+
+
+# Plot imputed values
+plot_errors(imputation_results, plotType = 'line')
