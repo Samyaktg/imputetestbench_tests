@@ -17,13 +17,22 @@ Upon reviewing the code of `imputeTestbench` and exploring related research pape
 ### 3. Additional Imputation Methods in ImputeTS Package
 
 The `ImputeTS` package offers reliable imputation methods that haven't been covered in the current code:
+
 - `na_kalman`: Missing Value Imputation by Kalman Smoothing
+
 - `na_ma`: Missing Value Imputation by Weighted Moving Average
+
 - `na_random`: Missing Value Imputation by Random Sample
+
 - `na_remove`: Remove Missing Values
+
 - `na_replace`: Replace Missing Values by a Defined Value
+
 - `na_seadec`: Seasonally Decomposed Missing Value Imputation
+
 - `na_seasplit`: Seasonally Splitted Missing Value Imputation
+
+
 
 Incorporating these methods is crucial for a comprehensive comparison of imputation results.
 
