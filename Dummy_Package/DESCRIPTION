@@ -3,7 +3,7 @@ Type: Package
 Title: samyak_package
 Version: 0.1.0
 Author: Samyak Bhansali
-Maintainer: <samyak.bhansali.201559@gmail.com>
+Maintainer: Samyak Bhansali <samyak.bhansali.201559@gmail.com>
 Description: A R package with five functions to perform statistical operations such as Anova and Manova and find the elements with the most significance ones.As well as further analysis of the data.
 License: None as of yet
 RoxygenNote: 7.3.1

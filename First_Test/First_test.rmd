@@ -1,6 +1,6 @@
 ---
 title: "Oil Data Analysis"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +37,7 @@ print(time_series_df)
 ```
 Use imputeTestbench to impute missing values
 ```{r}
-imputation_results <- impute_errors(data = time_series_df)
+imputation_results <- impute_errors(errorParameter = 'mape' ,data = time_series_df)
 imputation_results
 ```
 
